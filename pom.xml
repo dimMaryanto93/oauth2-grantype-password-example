@@ -13,6 +13,7 @@
 
     <modules>
         <module>authserver</module>
+        <module>mits-resource</module>
     </modules>
 
     <parent>

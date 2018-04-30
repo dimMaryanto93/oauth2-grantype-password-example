@@ -21,6 +21,8 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 @EnableAuthorizationServer
 public class AuthorizationServerApplication extends AuthorizationServerConfigurerAdapter {
 
+    private static final String RESOURCE_ID = "MANDIRI_RESOURCE";
+
     @Autowired
     @Qualifier("authenticationManagerBean")
     private AuthenticationManager authenticationManager;
@@ -53,12 +55,13 @@ public class AuthorizationServerApplication extends AuthorizationServerConfigure
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory().withClient("implisit_authorization")
+        clients.inMemory()
+                .withClient("mandiri_mits")
                 .secret("123456")
                 .scopes("read", "write", "trust")
                 .authorizedGrantTypes("implicit", "authorization_code", "refresh-token")
                 .authorities("CLIENT_APP")
-                .resourceIds("MANDIRI_RESOURCE")
+                .resourceIds(RESOURCE_ID)
                 .autoApprove(true);
 //        clients.inMemory()
 //                .withClient("implisitauth")
