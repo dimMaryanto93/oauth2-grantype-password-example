@@ -1,0 +1,6 @@
+{
+  "/oauth": {
+    "target": "http://localhost:10000",
+    "secure": false
+  }
+}
