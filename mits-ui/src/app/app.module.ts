@@ -3,6 +3,10 @@ import {NgModule} from '@angular/core';
 
 
 import {AppComponent} from './app.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {UserService} from "./user.service";
+import {AuthService} from "./auth.service";
 
 
 @NgModule({
@@ -10,9 +14,13 @@ import {AppComponent} from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    UserService, AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
