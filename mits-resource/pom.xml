@@ -11,7 +11,7 @@
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.maryanto.dimas.oauth2.implicit</groupId>
+        <groupId>com.maryanto.dimas.oauth2.password</groupId>
         <artifactId>springboot-oauth2-example</artifactId>
         <version>1.0</version>
     </parent>

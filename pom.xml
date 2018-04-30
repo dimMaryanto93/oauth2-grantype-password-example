@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.maryanto.dimas.oauth2.implicit</groupId>
+    <groupId>com.maryanto.dimas.oauth2.password</groupId>
     <artifactId>springboot-oauth2-example</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
 
-    <name>Springboot OAuth2 method Implicit</name>
+    <name>Springboot OAuth2 grant type password</name>
     <description>Demo project for Spring Boot</description>
 
     <modules>

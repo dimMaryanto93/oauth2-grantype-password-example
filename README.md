@@ -1,4 +1,4 @@
-# Project OAuth2 implementation Implicit Mothod
+# Project OAuth2 implementation Password Flow
 
 Project OAuth2 dengan Springboot **1.5.12.RELEASE**
 
