@@ -1,4 +1,4 @@
-package com.maryanto.dimas.authserver.config;
+package com.maryanto.dimas.resource.mits.config;
 
 import org.springframework.context.annotation.Configuration;
 

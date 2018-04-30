@@ -1,12 +1,12 @@
-package com.maryanto.dimas.authserver;
+package com.maryanto.dimas.resource.mits;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AuthServer {
+public class ResourceServerMits {
 
     public static void main(String[] args) {
-        SpringApplication.run(AuthServer.class, args);
+        SpringApplication.run(ResourceServerMits.class, args);
     }
 }
