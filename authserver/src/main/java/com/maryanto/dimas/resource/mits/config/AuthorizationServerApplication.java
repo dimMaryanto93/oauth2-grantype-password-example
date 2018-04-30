@@ -59,18 +59,10 @@ public class AuthorizationServerApplication extends AuthorizationServerConfigure
                 .withClient("mandiri_mits")
                 .secret("123456")
                 .scopes("read", "write", "trust")
-                .authorizedGrantTypes("implicit", "authorization_code", "refresh-token")
+                .authorizedGrantTypes("password", "authorization_code", "refresh_token")
                 .authorities("CLIENT_APP")
                 .resourceIds(RESOURCE_ID)
                 .autoApprove(true);
-//        clients.inMemory()
-//                .withClient("implisitauth")
-//                .secret("123456")
-//                .authorizedGrantTypes("authorization_code", "refresh_token")
-//                .scopes("read", "write")
-//                .authorities("CLIENT_APP")
-//                .resourceIds("MANDIRI_RESOURCE")
-//                .autoApprove(true);
     }
 
     @Override
