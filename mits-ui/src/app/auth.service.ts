@@ -15,15 +15,12 @@ export class AuthService {
     params.append('grant_type', 'password');
     params.append('client_id', 'mandiri_mits');
 
-    let headers = new HttpHeaders();
-    headers.append("Authorization", `Basic ${btoa('mandiri_mits:123456')}`);
-    headers.append("Content-Type", "application/x-www-form-urlencoded");
-    headers.append("Access-Control-Allow-Credentials", "true");
-
-    this._http.post(`http://localhost:10000/oauth/token?grant_type=password&client_id=mandiri_mits&password=${_user.password}&username=${_user.username}`, {}, {
-      headers: headers
+    this._http.post(`/oauth/token?grant_type=password&client_id=mandiri_mits&password=${_user.password}&username=${_user.username}`, {}, {
+      headers: new HttpHeaders().set("Authorization", `Basic ${btoa('mandiri_mits:123456')}`)
     }).subscribe(
-      data => console.log(data),
+      data => {
+        localStorage.setItem("token", data.access_token);
+      },
       err => alert('Invalid Credentials'));
   }
 
